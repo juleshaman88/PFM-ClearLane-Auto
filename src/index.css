@@ -1,0 +1,77 @@
+/* Tokens: warm white + navy + teal. Teal text uses --teal (readable on warm white); --teal-l is for dark surfaces. */
+:root{--bg:#FBF8F3;--surf:#fff;--navy:#0F2A43;--ink2:#41566B;--teal:#0B7A75;--teal-d:#085F5B;--teal-l:#6FD6CE;--tint:#E8F3F1;--line:#DDD6CB;--err:#B3261E;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--navy);font:400 18px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.015em}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0 0 1em}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;background:var(--navy);color:#fff;padding:8px 14px}
+.skip:focus{left:8px;top:8px;z-index:9}
+.bar{border-bottom:1px solid var(--line)}
+.bar-in{display:flex;justify-content:space-between;align-items:center;padding-block:14px}
+.mark{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:500;color:var(--navy);text-decoration:none}
+.mark b{font-weight:800;margin-left:-8px}
+.bar-note{font-size:.9rem;color:var(--ink2)}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start;padding-block:56px 72px}
+.lede{font-size:1.2rem;color:var(--ink2);max-width:34em}
+.ticks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px}
+.ticks li{padding-left:30px;position:relative}
+.ticks li::before{content:"";position:absolute;left:0;top:.8em;width:16px;height:3px;background:var(--teal);border-radius:2px}
+/* The one memorable element: a lane-marked panel. */
+.card{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:32px 32px 32px 40px;position:relative;box-shadow:0 12px 32px -16px rgba(15,42,67,.25);scroll-margin-top:24px}
+.card::before{content:"";position:absolute;left:16px;top:28px;bottom:28px;width:4px;background:repeating-linear-gradient(var(--teal) 0 14px,transparent 14px 24px);border-radius:2px}
+.step{font-size:.9rem;font-weight:700;color:var(--teal-d);margin-bottom:6px}
+.hint{color:var(--ink2);font-size:.95rem}
+.ages{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
+.age{font:700 1.15rem Figtree,sans-serif;color:var(--navy);background:var(--bg);border:2px solid var(--line);border-radius:var(--r);padding:18px 12px;min-height:60px;cursor:pointer;transition:border-color .15s,background .15s}
+.age:hover{border-color:var(--teal);background:var(--tint)}
+.chosen{display:flex;gap:10px;align-items:center;background:var(--tint);border-radius:10px;padding:8px 14px;width:fit-content;margin-bottom:20px}
+label{display:block;font-weight:700;margin-bottom:6px}
+input{width:100%;font:700 1.5rem Figtree,sans-serif;letter-spacing:.12em;padding:14px 16px;border:2px solid var(--navy);border-radius:var(--r);background:#fff;color:var(--navy)}
+input[aria-invalid=true]{border-color:var(--err)}
+input:disabled{background:var(--bg);opacity:.7}
+.err{color:var(--err);font-weight:500;font-size:.95rem}
+.err.box{background:#FCEDEB;border-radius:10px;padding:10px 14px}
+.btn{display:block;width:100%;margin-top:16px;font:800 1.1rem Figtree,sans-serif;background:var(--teal);color:#fff;border:0;border-radius:999px;padding:16px 28px;cursor:pointer;text-align:center;text-decoration:none;transition:background .15s}
+.btn:hover:not(:disabled){background:var(--teal-d)}
+.btn:disabled{opacity:.75;cursor:progress}
+.btn.ghost{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.btn.light{background:#fff;color:var(--navy);width:auto;display:inline-block}
+.btn.light:hover{background:var(--tint)}
+.link{background:none;border:0;color:var(--teal-d);font:700 1rem Figtree,sans-serif;text-decoration:underline;cursor:pointer;padding:4px}
+.band{background:var(--tint);padding-block:64px}
+.steps{list-style:none;counter-reset:s;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.steps li{counter-increment:s;border-top:4px solid var(--teal);padding-top:16px}
+.steps li::before{content:"Step " counter(s);font-weight:700;font-size:.9rem;color:var(--teal-d)}
+.rates{padding-block:72px 0;max-width:800px}
+.table-scroll{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;background:var(--surf);border:1px dashed var(--teal)}
+caption{text-align:left;font-weight:700;padding:0 0 8px;color:var(--teal-d)}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+thead th{background:var(--tint)}
+.faq{padding-block:72px;max-width:800px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:700;cursor:pointer;font-size:1.1rem}
+details p{margin:10px 0 0;color:var(--ink2)}
+.final{background:var(--navy);color:#fff;padding-block:64px;text-align:center}
+.final p{color:#C9D6E2}
+.foot{padding-block:28px;font-size:.85rem;color:var(--ink2)}
+.debug{position:fixed;bottom:12px;right:12px;max-width:420px;max-height:40vh;overflow:auto;background:#fff;border:2px solid var(--navy);border-radius:10px;padding:10px 14px;font-size:.75rem;z-index:20}
+.debug ol{padding-left:18px;margin:6px 0 0}
+.debug code{word-break:break-all}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:32px;padding-block:32px 48px}.steps{grid-template-columns:1fr}.bar-note{display:none}.card{padding:24px 20px 24px 32px}.card::before{left:12px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* Hero banner: image sits behind everything and flexes with the viewport */
+.hero-banner{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(560px,78vh,820px);display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 70%;z-index:-2}
+.hero-banner .hero{width:100%}
+@media(max-width:860px){/* Copy sits on a solid white panel, matching the form card, so the image shows at full strength */
+.hero-copy{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 12px 32px -16px rgba(15,42,67,.25)}
+.hero-copy .lede{max-width:none}
+@media(max-width:860px){.hero-copy{padding:24px 20px}}
+}
