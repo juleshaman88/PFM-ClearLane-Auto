@@ -7,22 +7,22 @@ h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.015em}
 h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800}
 h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800}
 h3{font-size:1.15rem;font-weight:700}
-p{margin:0 0 1em}
+p{margin:0 0 1em;padding:.5em 0}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
 .skip{position:absolute;left:-999px;background:var(--navy);color:#fff;padding:8px 14px}
 .skip:focus{left:8px;top:8px;z-index:9}
-.bar{border-bottom:1px solid var(--line)}
-.bar-in{display:flex;justify-content:space-between;align-items:center;padding-block:14px}
-.mark{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:500;color:var(--navy);text-decoration:none}
+.bar{color:#DDD6CB}
+.bar-in{display:flex;justify-content:center;align-items:center;padding-block:20px}
+.mark{display:flex;align-items:center;gap:10px;font-size:2rem;font-weight:500;color:var(--navy);text-decoration:none}
 .mark b{font-weight:800;margin-left:-8px}
-.bar-note{font-size:.9rem;color:var(--ink2)}
 .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start;padding-block:56px 72px}
+.hero-copy{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 12px 32px -16px rgba(15,42,67,.25)}
+.hero-copy .lede{max-width:none}
 .lede{font-size:1.2rem;color:var(--ink2);max-width:34em}
 .ticks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px}
 .ticks li{padding-left:30px;position:relative}
 .ticks li::before{content:"";position:absolute;left:0;top:.8em;width:16px;height:3px;background:var(--teal);border-radius:2px}
-/* The one memorable element: a lane-marked panel. */
 .card{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:32px 32px 32px 40px;position:relative;box-shadow:0 12px 32px -16px rgba(15,42,67,.25);scroll-margin-top:24px}
 .card::before{content:"";position:absolute;left:16px;top:28px;bottom:28px;width:4px;background:repeating-linear-gradient(var(--teal) 0 14px,transparent 14px 24px);border-radius:2px}
 .step{font-size:.9rem;font-weight:700;color:var(--teal-d);margin-bottom:6px}
@@ -64,14 +64,10 @@ details p{margin:10px 0 0;color:var(--ink2)}
 .debug{position:fixed;bottom:12px;right:12px;max-width:420px;max-height:40vh;overflow:auto;background:#fff;border:2px solid var(--navy);border-radius:10px;padding:10px 14px;font-size:.75rem;z-index:20}
 .debug ol{padding-left:18px;margin:6px 0 0}
 .debug code{word-break:break-all}
-@media(max-width:860px){.hero{grid-template-columns:1fr;gap:32px;padding-block:32px 48px}.steps{grid-template-columns:1fr}.bar-note{display:none}.card{padding:24px 20px 24px 32px}.card::before{left:12px}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:32px;padding-block:32px 48px}.steps{grid-template-columns:1fr}.card{padding:24px 20px 24px 32px}.card::before{left:12px}.hero-copy{padding:24px 20px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-/* Hero banner: image sits behind everything and flexes with the viewport */
 .hero-banner{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(560px,78vh,820px);display:flex;align-items:center}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 70%;z-index:-2}
-.hero-banner .hero{width:100%}
-@media(max-width:860px){/* Copy sits on a solid white panel, matching the form card, so the image shows at full strength */
-.hero-copy{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 12px 32px -16px rgba(15,42,67,.25)}
-.hero-copy .lede{max-width:none}
-@media(max-width:860px){.hero-copy{padding:24px 20px}}
-}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
+.hero-banner .hero{width:100%;align-items:stretch;padding-block:56px 72px}
+.hero-banner .hero-copy{display:flex;flex-direction:column;justify-content:center}
+.bar{background:var(--surf)}

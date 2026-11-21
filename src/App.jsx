@@ -5,11 +5,10 @@ import HowItWorks from './components/HowItWorks.jsx';
 import IllustrativeRates from './components/IllustrativeRates.jsx';
 import FaqSection from './components/FaqSection.jsx';
 import FinalCta from './components/FinalCta.jsx';
-import DebugPanel from './components/DebugPanel.jsx';
 import { getTracking, hasFlag } from './utils/mockApi.js';
 
 export default function App() {
-  const tracking = useMemo(getTracking, []); // utm_source, utm_campaign, click_id
+  const tracking = useMemo(getTracking, []);
   const debug = useMemo(() => hasFlag('debug'), []);
   const [events, setEvents] = useState([]);
 
@@ -33,7 +32,7 @@ export default function App() {
       <footer className="foot"><div className="wrap">
         <p>ClearLane helps drivers explore insurance options. We do not issue policies, and nothing on this page is an offer of coverage or a guaranteed rate.</p>
       </div></footer>
-      {debug && <DebugPanel events={events} />}
+      {debug && <div className="debug"><ol>{events.map((e, i) => <li key={i}><code>{JSON.stringify(e)}</code></li>)}</ol></div>}
     </>
   );
 }

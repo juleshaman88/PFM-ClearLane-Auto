@@ -45,12 +45,12 @@ export default function HeroFunnel({ tracking, track }) {
 
   const copy = (
     <div className="hero-copy">
-      <h1>Compare auto insurance options for your age.</h1>
-      <p className="lede">Insurance shopping shouldn't feel like a maze. Tell us your age and ZIP code, and ClearLane starts a comparison to help you see a clearer road to your next policy.</p>
+      <h1>Compare auto insurance rates for your age.</h1>
+      <p className="lede">Insurance shopping can feel like a maze - but it doesn't have to be. Tell us your age range and ZIP code, and ClearLane Auto starts a comparison to help you see a clearer road to your next policy.</p>
       <ul className="ticks">
-        <li>Two quick questions, about a minute</li>
-        <li>Starting doesn't buy or change any policy</li>
-        <li>Rates vary by person, so we don't promise savings</li>
+        <li>Two quick questions and you're done.</li>
+        <li>Starting with us doesn't buy or change any policy.</li>
+        <li>Rates vary by person, so we don't promise savings.</li>
       </ul>
     </div>
   );
@@ -60,7 +60,7 @@ export default function HeroFunnel({ tracking, track }) {
     card = (
       <section className="card" id="compare" aria-labelledby="done-h">
         <h2 id="done-h" tabIndex={-1} ref={doneRef}>Your comparison has started</h2>
-        <p>We saved your answers: age {age}, ZIP {zip}. This is a demo, so no real request was sent and nothing was bought.</p>
+        <p>We saved your answers: age range {age}, ZIP {zip}. This is a demo, so no real request was sent and nothing was bought.</p>
         <button className="btn ghost" onClick={() => { setAge(null); setZip(''); setStatus('idle'); attempts.current = 0; }}>Start over</button>
       </section>
     );
@@ -88,7 +88,7 @@ export default function HeroFunnel({ tracking, track }) {
               onChange={(e) => { setZip(e.target.value.replace(/\D/g, '').slice(0, 5)); setFieldError(''); }} />
             {fieldError
               ? <p id="zip-err" className="err" role="alert">{fieldError}</p>
-              : <p id="zip-hint" className="hint">Rates depend on where you park. Leading zeros count.</p>}
+              : <p id="zip-hint" className="hint">Rates depend on where you live. Leading zeros count.</p>}
             {status === 'error' && <p className="err box" role="alert">We couldn't start your comparison. Your answers are saved. Select the button to try again.</p>}
             <button className="btn" type="submit" disabled={status === 'loading'} aria-busy={status === 'loading'}>
               {status === 'loading' ? 'Starting your comparison…' : status === 'error' ? 'Try again' : 'Compare my options'}
