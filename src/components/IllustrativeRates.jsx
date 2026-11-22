@@ -1,5 +1,5 @@
 // Made-up example numbers for explaining how age can shift rates. Not quotes, not carrier data, not savings.
-const ROWS = [['35–45', '$110–$200'], ['46–55', '$120–$190'], ['56–65', '$120–$210']];
+const ROWS = [['35–40', '$110–$190'], ['41–45', '$120–$190'], ['46–50', '$120–$210'], ['51–55', '$120–$210'], ['56–60', '$120–$210'], ['61–65', '$120–$210']];
 export default function IllustrativeRates() {
   return (
     <section className="wrap rates">

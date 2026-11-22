@@ -3,7 +3,7 @@ import heroImg from '../assets/hero-image.webp';
 import { submitComparison } from '../utils/mockApi.js';
 
 // Non-overlapping ranges covering every adult age.
-export const AGE_RANGES = ['35–45', '46–55', '56–65'];
+export const AGE_RANGES = ['35-40', '41-45', '46-50', '51-55', '56-60', '61-65'];
 
 export default function HeroFunnel({ tracking, track }) {
   const [age, setAge] = useState(null);

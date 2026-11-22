@@ -30,7 +30,7 @@ export default function App() {
         <FinalCta />
       </main>
       <footer className="foot"><div className="wrap">
-        <p>ClearLane helps drivers explore insurance options. We do not issue policies, and nothing on this page is an offer of coverage or a guaranteed rate.</p>
+        <p>ClearLane Auto helps drivers explore insurance options. We do not issue policies, and nothing on this page is an offer of coverage or a guaranteed rate. This is for illustrative purposes only.</p>
       </div></footer>
       {debug && <div className="debug"><ol>{events.map((e, i) => <li key={i}><code>{JSON.stringify(e)}</code></li>)}</ol></div>}
     </>
