@@ -1,7 +1,13 @@
-# Three Changes and Frictions
+# Three Changes and Frictions to Landing Page
 1. The hero form has a clear prompt asking how old the user is. This provides clear instruction for the user to move forward in the conversion process. Keeping forms clear and concise results in more forms being submitted. Providing clear ways to update information already entered helps collect accurate information from users. 
 2. Providing a table of example monthly costs provides users with a estimated monthly range. This addresses the friction of users who do not know if they want to provide information yet, but want to get a base-line quote idea before filling out a form. 
 3. The final CTA bar with an anchor link to the form in the hero bar reduces the amount of forms necessary to build on a page. By having this anchor link and the page auto-scrolling provides the same user experience as clicking on an age range in the Alliance Auto Coverage final CTA bar that redirects to the next page.  
+
+## Pages
+
+
+The app uses browser history routing. Configure the production host to serve `index.html` for these routes so direct links and refreshes work.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

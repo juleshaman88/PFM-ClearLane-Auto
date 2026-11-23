@@ -16,6 +16,14 @@ p{margin:0 0 1em;padding:.5em 0}
 .bar-in{display:flex;justify-content:center;align-items:center;padding-block:20px}
 .mark{display:flex;align-items:center;gap:10px;font-size:2rem;font-weight:500;color:var(--navy);text-decoration:none}
 .mark b{font-weight:800;margin-left:-8px}
+.site-nav{background:var(--surf);border-bottom:1px solid var(--line)}
+.site-nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:12px}
+.site-nav-links{display:flex;align-items:center;gap:24px}
+.site-nav-links a{color:var(--navy);font-weight:700;text-decoration:none}
+.site-nav-links a:hover,.site-nav-links a[aria-current=page]{color:var(--teal-d);text-decoration:underline;text-underline-offset:4px}
+.site-nav-toggle{display:none;font:700 1rem Figtree,system-ui,sans-serif;color:var(--navy);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 14px;cursor:pointer}
+@media(max-width:760px){.site-nav-inner{flex-wrap:wrap;gap:12px}.site-nav .mark{font-size:clamp(1.25rem,5vw,2rem)}.site-nav-toggle{display:block}.site-nav-links{display:none;flex-basis:100%;align-items:stretch;flex-direction:column;gap:0}.site-nav-links.is-open{display:flex}.site-nav-links a{padding:10px 0}}
+.page-placeholder{padding-block:56px}
 .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start;padding-block:56px 72px}
 .hero-copy{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 12px 32px -16px rgba(15,42,67,.25)}
 .hero-copy .lede{max-width:none}
