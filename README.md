@@ -16,6 +16,13 @@ The homepage offers a wider variety of content related to why shopping for diffe
 ## AI Usage
 Throughout this project, I utilized AI to build basic page outlines following the prompts outlined in the assignment brief. I used a combination of Gemini and Git CoPilot to create graphics, test style changes, create baseline content, and debug all code. I went through all updates that these AI agents made to ensure that accurate changes were made when requested. AI helped me create quick outlines and allowed me time to focus on design and content to ensure a quality user experience on all pages. 
 
+## Time Spent, Known Limitations, and Next Steps
+I used up the full six hours of this project allotment over the course of multiple days. I utilized a personal time tracking device to trigger when a time limit had been reached.
+
+The limitations of this project include being unable to link to actual insurance providers for quotes based on user's entered information through the ComparisonForm. 
+
+Next step in this project would be to include APIs for the necessary insurance providers and link to their quote tools based on the user's entered information. I would also include how many users used ClearLane Auto to complete their insurance journey and how many of them saved money on their insurance premiums. 
+
 ## Routes for Each Page
 These pages are all hosted on my local server and require Vite to run accordingly since I did not push them live onto a hosting platform. For the three pages, the routes are as follows: 
 - http://localhost:5173/ - Homepage
