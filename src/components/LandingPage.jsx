@@ -11,6 +11,7 @@ export default function LandingPage() {
   const tracking = useMemo(() => getTracking(), []);
   const debug = useMemo(() => hasFlag('debug'), []);
   const [events, setEvents] = useState([]);
+  const [age, setAge] = useState(null);
 
   const track = useCallback((name, props = {}) => {
     const evt = { event: name, ...props, ...tracking, at: new Date().toISOString() };
@@ -23,9 +24,9 @@ export default function LandingPage() {
       <a className="skip" href="#compare">Skip to comparison</a>
       <Header />
       <main>
-        <LpHero tracking={tracking} track={track} />
+        <LpHero tracking={tracking} track={track} age={age} setAge={setAge} />
         <HowItWorks />
-        <IllustrativeRates />
+        <IllustrativeRates selectedAge={age} />
         <FaqSection />
         <FinalCta />
       </main>

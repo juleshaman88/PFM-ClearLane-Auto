@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavBar from './NavBar.jsx';
 import HowItWorks from './HowItWorks.jsx';
@@ -14,6 +14,7 @@ import Footer from './Footer.jsx';
 export default function Homepage() {
   const { hash } = useLocation();
   const tracking = useMemo(() => getTracking(), []);
+  const [age, setAge] = useState(null);
   useEffect(() => {
     if (hash === '#compare') document.getElementById('compare')?.scrollIntoView();
   }, [hash]);
@@ -60,7 +61,7 @@ export default function Homepage() {
               <h2>Start Your Comparison</h2>
               <p>Two quick questions are all it takes to begin exploring your options.</p>
             </div>
-            <ComparisonForm tracking={tracking} track={track} />
+            <ComparisonForm tracking={tracking} track={track} age={age} setAge={setAge} />
           </div>
         </section>
       </main>

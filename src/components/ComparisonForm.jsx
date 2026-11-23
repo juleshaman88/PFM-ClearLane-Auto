@@ -3,8 +3,7 @@ import { submitComparison } from './utils/mockApi.js';
 
 const AGE_RANGES = ['35-40', '41-45', '46-50', '51-55', '56-60', '61-65'];
 
-export default function ComparisonForm({ tracking, track }) {
-  const [age, setAge] = useState(null);
+export default function ComparisonForm({ tracking, track, age, setAge }) {
   const [zip, setZip] = useState('');
   const [fieldError, setFieldError] = useState('');
   const [status, setStatus] = useState('idle'); // idle | loading | success | error

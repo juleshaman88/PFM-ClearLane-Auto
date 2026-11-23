@@ -1,7 +1,7 @@
 import heroImg from '../assets/hero-image.webp';
 import ComparisonForm from './ComparisonForm.jsx';
 
-export default function LpHero({ tracking, track }) {
+export default function LpHero({ tracking, track, age, setAge }) {
   const copy = (
     <div className="hero-copy">
       <h1>Compare auto insurance rates for your age.</h1>
@@ -18,7 +18,7 @@ export default function LpHero({ tracking, track }) {
     <section className="hero-banner">
       {/* Decorative background: fills the banner at any viewport size */}
       <img className="hero-bg" src={heroImg} alt="" aria-hidden="true" />
-      <div className="hero wrap">{copy}<ComparisonForm tracking={tracking} track={track} /></div>
+      <div className="hero wrap">{copy}<ComparisonForm tracking={tracking} track={track} age={age} setAge={setAge} /></div>
     </section>
   );
 }
