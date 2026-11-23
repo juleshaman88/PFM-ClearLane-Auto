@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import Header from './Header.jsx';
-import HeroFunnel from './HeroFunnel.jsx';
+import LpHero from './LpHero.jsx';
 import HowItWorks from './HowItWorks.jsx';
 import IllustrativeRates from './IllustrativeRates.jsx';
 import FaqSection from './FaqSection.jsx';
@@ -23,7 +23,7 @@ export default function LandingPage() {
       <a className="skip" href="#compare">Skip to comparison</a>
       <Header />
       <main>
-        <HeroFunnel tracking={tracking} track={track} />
+        <LpHero tracking={tracking} track={track} />
         <HowItWorks />
         <IllustrativeRates />
         <FaqSection />

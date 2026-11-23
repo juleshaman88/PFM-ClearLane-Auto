@@ -8,7 +8,7 @@ export default function FinalCta() {
   return (
     <section className="final"><div className="wrap">
       <h2>Ready for a clearer road?</h2>
-      <p>It takes about a minute to begin.</p>
+      <p>Start with your age range and ZIP code, then explore your options at your own pace.</p>
       <a className="btn light" href="#compare" onClick={go}>Compare my options</a>
     </div></section>
   );

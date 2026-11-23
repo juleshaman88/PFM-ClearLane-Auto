@@ -1,10 +1,17 @@
 # Three Changes and Frictions to Landing Page
-1. The hero form has a clear prompt asking how old the user is. This provides clear instruction for the user to move forward in the conversion process. Keeping forms clear and concise results in more forms being submitted. Providing clear ways to update information already entered helps collect accurate information from users. 
+1. The hero form has a clear prompt asking how old the user is. This provides clear instruction for the user to move forward in the conversion process. Keeping forms clear and concise results in more forms being submitted. Providing clear ways to update information already entered helps collect accurate information from users.
+  This would be tested through updating the age
 2. Providing a table of example monthly costs provides users with a estimated monthly range. This addresses the friction of users who do not know if they want to provide information yet, but want to get a base-line quote idea before filling out a form. 
 3. The final CTA bar with an anchor link to the form in the hero bar reduces the amount of forms necessary to build on a page. By having this anchor link and the page auto-scrolling provides the same user experience as clicking on an age range in the Alliance Auto Coverage final CTA bar that redirects to the next page.  
 
-## Pages
+## Two Specific Ideas on Homepage from Lemonade
+1. Lemonade uses easy-to-understand graphics in many of their blocks, such as the types of insurance offered thats under the hero banner as well as their "How Lemonade Works" section. I included these simple graphics on the homepage to give the "Coverage Optiosn for What You Need" section. 
+2. The content on the Lemonade homepage is clear, concise, and informative. I used this in the content on the homepage. 
 
+## Homepage Needs vs Landing Page Needs
+The homepage offers a wider variety of content related to why shopping for different insurance prices is important. With this content, I was able to educated the audience that utilizing a comparison tool is the best way to get the best price served to them. Whereas with the Landing Page, it was geared towards people who are ready to convert and find options. 
+
+## Pages
 
 The app uses browser history routing. Configure the production host to serve `index.html` for these routes so direct links and refreshes work.
 
