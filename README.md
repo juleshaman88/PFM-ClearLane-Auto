@@ -7,7 +7,7 @@
 - By tracking clicks to this button through the anchor link text, we can track users journey into the form. From there, tracking whether they clicked on the age_selcted and got through to the final comparison_started event will give an accurate user journey.
 
 ## Task 2 - Homepage
-1. Lemonade uses easy-to-understand graphics in many of their blocks, such as the types of insurance offered thats under the hero banner as well as their "How Lemonade Works" section. I included these simple graphics on the homepage to give the "Coverage Optiosn for What You Need" section. 
+1. Lemonade uses easy-to-understand graphics in many of their blocks, such as the types of insurance offered thats under the hero banner as well as their "How Lemonade Works" section. I included these simple graphics on the homepage to give the "Coverage Options for What You Need" section. 
 2. The content on the Lemonade homepage is clear, concise, and informative. I used this in the content on the homepage. 
 
 The homepage offers a wider variety of content related to why shopping for different insurance prices is important. With this content, I was able to educated the audience that utilizing a comparison tool is the best way to get the best price served to them. Whereas with the Landing Page, it was geared towards people who are ready to convert and find options. 
