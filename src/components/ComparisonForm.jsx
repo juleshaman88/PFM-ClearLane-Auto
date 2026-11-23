@@ -22,6 +22,7 @@ export default function ComparisonForm({ tracking, track, age, setAge }) {
     e.preventDefault();
     if (pending.current) return; // blocks repeat clicks/Enter while pending
     if (!/^\d{5}$/.test(zip)) {
+      track('zip_validation_error', { reason: zip ? 'incomplete' : 'empty' });
       setFieldError(zip ? 'ZIP codes have exactly 5 digits, like 02134.' : 'Enter your 5-digit ZIP code.');
       zipRef.current?.focus();
       return;

@@ -6,11 +6,10 @@
 3. The final CTA bar with an anchor link to the form in the hero bar reduces the amount of forms necessary to build on a page. By having this anchor link and the page auto-scrolling provides the same user experience as clicking on an age range in the Alliance Auto Coverage final CTA bar that redirects to the next page.  
 - By tracking clicks to this button through the anchor link text, we can track users journey into the form. From there, tracking whether they clicked on the age_selcted and got through to the final comparison_started event will give an accurate user journey.
 
-## Homepage
+## Task 2 - Homepage
 1. Lemonade uses easy-to-understand graphics in many of their blocks, such as the types of insurance offered thats under the hero banner as well as their "How Lemonade Works" section. I included these simple graphics on the homepage to give the "Coverage Optiosn for What You Need" section. 
 2. The content on the Lemonade homepage is clear, concise, and informative. I used this in the content on the homepage. 
 
-## Homepage Needs vs Landing Page Needs
 The homepage offers a wider variety of content related to why shopping for different insurance prices is important. With this content, I was able to educated the audience that utilizing a comparison tool is the best way to get the best price served to them. Whereas with the Landing Page, it was geared towards people who are ready to convert and find options. 
 
 ## AI Usage
@@ -24,14 +23,15 @@ The limitations of this project include being unable to link to actual insurance
 Next step in this project would be to include APIs for the necessary insurance providers and link to their quote tools based on the user's entered information. I would also include how many users used ClearLane Auto to complete their insurance journey and how many of them saved money on their insurance premiums. 
 
 ## Routes for Each Page
+The app uses browser history routing. Configure the production host to serve `index.html` for these routes so direct links and refreshes work.
+
 These pages are all hosted on my local server and require Vite to run accordingly since I did not push them live onto a hosting platform. For the three pages, the routes are as follows: 
 - http://localhost:5173/ - Homepage
 - http://localhost:5173/blog - Blog
 - http://localhost:5173/landing-page - Landing Page
 
-## Pages
-
-The app uses browser history routing. Configure the production host to serve `index.html` for these routes so direct links and refreshes work.
+## Triggering Mock Error
+Submitting an empty or incomplete ZIP code logs a `zip_validation_error` mock event with an `empty` or `incomplete` reason. The event does not include the ZIP code. On the landing page, add `?debug` to the URL to view mock events.
 
 # React + TypeScript + Vite
 
